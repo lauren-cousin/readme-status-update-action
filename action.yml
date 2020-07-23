@@ -1,0 +1,13 @@
+name: 'Current Status'
+description: 'Log your status and record the time'
+inputs:
+  your-status:  # id of input
+    description: 'Your status'
+    required: true
+    default: 'Coding :computer:'
+outputs:
+  time: # id of output
+    description: 'The time of your most recent status'
+runs:
+  using: 'node12'
+  main: 'index.js'

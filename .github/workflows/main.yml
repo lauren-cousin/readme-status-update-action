@@ -1,0 +1,19 @@
+on: [push]
+
+jobs:
+  log_status_job:
+    runs-on: ubuntu-latest
+    name: A job to log your status
+    steps:
+      # To use this repository's private action,
+      # you must check out the repository
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Log status action step
+        uses: ./ # Uses an action in the root directory
+        id: status
+        with:
+          your-status: 'Building something :construction:'
+      # Use the output from the `status` step
+      - name: Get the status and time
+        run: echo "Status = ${{ your-status }} at ${{ steps.status.outputs.time }}"
