@@ -16,4 +16,4 @@ jobs:
           your-status: 'Writing some code :computer:'
       # Use the output from the `status` step
       - name: Get the status and time
-        run: echo "Status = ${{ steps.status.yourStatus }} at ${{ steps.status.outputs.time }}"
+        run: echo "Status = ${{ steps.status.outputs.yourStatus }} at ${{ steps.status.outputs.time }}"
