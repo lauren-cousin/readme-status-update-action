@@ -16,4 +16,4 @@ jobs:
           your-status: 'Building something :construction:'
       # Use the output from the `status` step
       - name: Get the status and time
-        run: echo "Status = ${{ your-status }} at ${{ steps.status.outputs.time }}"
+        run: echo "Status = ${{ steps.status.your-status }} at ${{ steps.status.outputs.time }}"
